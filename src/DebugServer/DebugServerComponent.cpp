@@ -55,6 +55,7 @@ namespace Bloom::DebugServer
     void DebugServerComponent::startup() {
         this->setName("DS");
         Logger::info("Starting DebugServer");
+        this->blockAllSignals();
 
         EventManager::registerListener(this->eventListener);
         this->eventListener->setInterruptEventNotifier(&this->interruptEventNotifier);

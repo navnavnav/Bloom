@@ -130,7 +130,7 @@ namespace Bloom
 
         Logger::debug("Bloom version: " + Application::VERSION.toString());
 
-        this->blockAllSignalsOnCurrentThread();
+        this->blockAllSignals();
         this->startSignalHandler();
 
         Logger::info("Selected environment: \"" + this->selectedEnvironmentName + "\"");
